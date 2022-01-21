@@ -10,7 +10,7 @@ export const AddCategory = ({setCategory}) => {
     const handleSubmit = (e) => {
         e.preventDefault(); //Sirve para manejar el refesh de pagina que hacen por default los formularios
         if (inputValue.trim().length > 2) {
-            setCategory(cats => [...cats, inputValue]); //Añade el nuevo input ingresado
+            setCategory(cats => [inputValue, ...cats]); //Añade el nuevo input ingresado
             setInputValue(''); //Setea el input a vacio cuando se hace el submit
         }
         

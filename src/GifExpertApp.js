@@ -5,7 +5,7 @@ import { GifGrid } from './components/GifGrid';
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['Boku no Hero']);
+    const [categories, setCategories] = useState(['One punch man']);
 
     /* const handleAdd = () =>{
         //categories.push('HunterXHunter'); No se debe mutar el estado de los objetos
