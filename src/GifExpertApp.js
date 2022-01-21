@@ -20,7 +20,7 @@ const GifExpertApp = () => {
             <AddCategory setCategory={setCategories} />
             <hr />
 
-            <ol>
+            <ol className='container'>
                 {
                     categories.map((category) => (
                         <GifGrid
