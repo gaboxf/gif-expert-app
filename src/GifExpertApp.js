@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 
 
-const GifExpertApp = () =>{
+const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch', 'Dragon Ball', 'Boku no Hero']);
+    const [categories, setCategories] = useState(['One Punch', 'Boku no Hero']);
 
     /* const handleAdd = () =>{
         //categories.push('HunterXHunter'); No se debe mutar el estado de los objetos
@@ -16,8 +16,8 @@ const GifExpertApp = () =>{
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategory/>
-            <hr/>
+            <AddCategory setCategory={setCategories} />
+            <hr />
 
             <ol>
                 {
