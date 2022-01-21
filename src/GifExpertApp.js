@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch', 'Boku no Hero']);
+    const [categories, setCategories] = useState(['Boku no Hero']);
 
     /* const handleAdd = () =>{
         //categories.push('HunterXHunter'); No se debe mutar el estado de los objetos
@@ -21,10 +22,14 @@ const GifExpertApp = () => {
 
             <ol>
                 {
-                    categories.map((category) => {
-                        return <li key={category}>{category}</li>
-                        //Hay que especificar un key, para que cuando react renga que renderizar sepa que cosas debe cargar especificamente.
-                    })
+                    categories.map((category) => (
+                        <GifGrid
+                            key={category}
+                            category={category}
+                        />
+                    ))
+                    //return <li key={category}>{category}</li>
+                    //Hay que especificar un key, para que cuando react renga que renderizar sepa que cosas debe cargar especificamente.
                 }
             </ol>
         </>
