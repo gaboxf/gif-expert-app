@@ -1,27 +1,23 @@
 import React, {useState} from 'react';
-
-
+import { AddCategory } from './components/AddCategory';
 
 
 const GifExpertApp = () =>{
-    
-    //const categories = ['One Punch', 'Dragon Ball', 'Boku no Hero'];
 
     const [categories, setCategories] = useState(['One Punch', 'Dragon Ball', 'Boku no Hero']);
 
-    const handleAdd = () =>{
+    /* const handleAdd = () =>{
         //categories.push('HunterXHunter'); No se debe mutar el estado de los objetos
         //setCategories([...categories, 'HunterXHunter']);
         setCategories(cats => [...cats, 'HunterXHunter']);
         //Callback cats, las categorias en estado anterior sumado al nuevo estado que quiero agregar, regresando el nuevo estado.
-    }
+    } */
 
     return (
         <>
             <h2>GifExpertApp</h2>
+            <AddCategory/>
             <hr/>
-
-            <button onClick={handleAdd}>Agregar</button>
 
             <ol>
                 {
